@@ -65,7 +65,7 @@ input {
   padding: 30px;
   text-align: center;
   margin-top: 40px;
-  color: #7cc5d9;
+  color: black;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;

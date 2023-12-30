@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={!user ? ( <Welcome />) : (<Conversations />)}/>
-          <Route path="/chatbox" element={<ChatBox></ChatBox>} />
+          <Route path="/chatbox" element={!user ? ( <Welcome />) : (<ChatBox/>)}/>
         </Routes>
       </BrowserRouter>
     </div>
