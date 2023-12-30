@@ -21,7 +21,9 @@ input {
 .App {
   width: 100%;
   min-height: 100vh;
-  background-color: #1c2c4c;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
   color: #4c768d;
   padding-top: 60px;
 }
@@ -32,8 +34,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c768d;
-  color: #242443;
+  background-color: #090d53;
+  color: #dfdfea;
   height: 60px;
   position: fixed;
   left: 0;
@@ -52,7 +54,7 @@ input {
 .sign-out {
   padding: 5px 10px;
   border-radius: 5px;
-  color: #88dded;
+  color: #dfdfea;;
   border: 1px solid #1c2c4c;
   background-color: #1c2c4c;
   font-weight: 600;
@@ -118,7 +120,7 @@ input {
   bottom: 0px;
   width: 100%;
   padding: 20px 30px;
-  background-color: #4c768d;
+  background-color: #090d53;
   display: flex;
 }
 .send-message > input {

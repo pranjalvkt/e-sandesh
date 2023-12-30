@@ -1,0 +1,46 @@
+.messge-header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 190px;
+}
+.timestamp {
+    font-size: 12px;
+}
+#applogo {
+    height: 120%;
+}
+.conversations-parent {
+    display: flex;
+}
+.conversations {
+    height: 100vh;
+    width: 25%;
+    background-color: #ffe6bb;
+    cursor: pointer;
+}
+.conversations-expanded {
+    height: 100vh;
+    width: 75%;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+.conversation {
+    display: flex;
+    height: 7vw;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+}
+.conversation-img {
+    height: 6vw;
+    margin-left: 1vw;
+    border-radius: 100px;
+}
+.conversation p {
+    font-size: 2vw;
+    margin-left: 5vw;
+    color: #020202;;
+}
