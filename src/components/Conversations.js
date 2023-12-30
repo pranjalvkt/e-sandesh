@@ -13,9 +13,7 @@ const Conversations = () => {
                     <p>Mavericks</p>
                 </div>
             </div>
-            <div className="conversations-expanded">
-                
-            </div>
+            <div className="conversations-expanded"></div>
         </div>
     )
 }
