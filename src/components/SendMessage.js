@@ -12,7 +12,7 @@ const SendMessage = ({ scroll }) => {
       return;
     }
     const { uid, displayName, photoURL } = auth.currentUser;
-    await addDoc(collection(db, "test"), {
+    await addDoc(collection(db, "mavericks"), {
       text: message,
       name: displayName,
       avatar: photoURL,
