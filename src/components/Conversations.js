@@ -7,9 +7,9 @@ const Conversations = () => {
     }
     return(
         <div className="conversations-parent">
-            <div className="conversations" onClick={moveToChatBox}>
-                <div className="conversation">
-                    <img className="conversation-img" src={'https://ui-avatars.com/api/?name=Mavericks'} />
+            <div className="conversations" >
+                <div className="conversation" onClick={moveToChatBox}>
+                    <img className="conversation-img" alt='chat logo' src={'https://ui-avatars.com/api/?name=Mavericks'} />
                     <p>Mavericks</p>
                 </div>
             </div>

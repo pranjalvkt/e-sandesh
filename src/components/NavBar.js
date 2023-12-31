@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
-      <img src='/sandesh.svg' id="applogo"></img>
+      <img src='/sandesh.svg' id="applogo" alt="app logo"></img>
       <h1>e Sandesh</h1>
       {user ? (
         <button onClick={signOut} className="sign-out" type="button">

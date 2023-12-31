@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+
 const Welcome = () => {
   useEffect(() => {
     setLoadingFlag(true);
@@ -23,7 +23,7 @@ const Welcome = () => {
       {
         loadingFlag ?
           <div className="loadingbg">
-            <img className="loadinggif" src='/XOsX.gif' />
+            <img className="loadinggif" src='/XOsX.gif' alt='loading'/>
             <h1>Loading...</h1>
           </div> :
           <main>
