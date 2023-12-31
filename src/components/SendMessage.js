@@ -2,9 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import {useLocation} from 'react-router-dom';
 
 const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState("");
+  const location = useLocation();
   const sendMessage = async (event) => {
     event.preventDefault();
     if (message.trim() === "") {
@@ -12,7 +14,7 @@ const SendMessage = ({ scroll }) => {
       return;
     }
     const { uid, displayName, photoURL } = auth.currentUser;
-    await addDoc(collection(db, "mavericks"), {
+    await addDoc(collection(db, location.state.groupname), {
       text: message,
       name: displayName,
       avatar: photoURL,
@@ -20,7 +22,6 @@ const SendMessage = ({ scroll }) => {
       uid,
     });
     setMessage("");
-    scroll.current.scrollIntoView({ behavior: "smooth" })
   };
 
   return (

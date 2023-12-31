@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "firebase/auth";
-
 const Welcome = () => {
   useEffect(() => {
     setLoadingFlag(true);
   }, [])
+
   getRedirectResult(auth).then(() => {
-    console.log('resolved');
+    setLoadingFlag(false);
+  }).catch((err)=>{
     setLoadingFlag(false);
   })
   const googleSignIn = async () => {
