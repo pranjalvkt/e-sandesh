@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={!user ? ( <Welcome />) : (<Conversations />)}/>
           {/* <Route path="/" element={<Welcome />}/>
           <Route path="/chats" element={<Restricted child={<Conversations/>}/>}/> */}
-          <Route path="/chatbox" element={<Restricted child={<ChatBox/>}/>}/>
+          <Route exact path="/chatbox" element={<Restricted child={<ChatBox/>}/>}/>
         </Routes>
       </BrowserRouter>
     </div>
