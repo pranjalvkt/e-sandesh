@@ -10,14 +10,15 @@ import {
   limit,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import {useLocation} from 'react-router-dom';
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
-
+  const location = useLocation();
   useEffect(() => {
     const q = query(
-      collection(db, "mavericks"),
+      collection(db, location.state.groupname),
       orderBy("createdAt", "desc"),
       limit(50)
     );
@@ -30,9 +31,12 @@ const ChatBox = () => {
         (a, b) => a.createdAt - b.createdAt
       );
       setMessages(sortedMessages);
+      scroll.current.scrollIntoView({ behavior: "smooth" })
     });
+    
     return () => unsubscribe;
-  }, []);
+    
+  }, [location.state.groupname]);
 
   return (
     <main className="chat-box">

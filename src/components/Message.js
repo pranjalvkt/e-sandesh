@@ -8,7 +8,7 @@ const Message = ({message}) => {
   let nameArray = message.name.split(' ');
   return (
     <div className={`chat-bubble ${message.uid === user.uid ? "right" : ""}`}>
-      <img className="chat-bubble__left" src={'https://ui-avatars.com/api/?name='+ nameArray[0]+'+'+nameArray[1]} alt="user avatar" />
+      <img className="chat-bubble__left" src={'https://ui-avatars.com/api/?name='+ nameArray[0]+'+'+nameArray[1]+'&background=random'} alt="user avatar" />
       <div className="chat-bubble__right">
         <div className="messge-header">
           <p className="user-name">{message.name}</p>
