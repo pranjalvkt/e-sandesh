@@ -20,7 +20,7 @@
 .conversations {
     height: 100vh;
     width: 25%;
-    background-color: #ffe6bb;
+    background-color: #F3F8FF;
 }
 
 .conversations-expanded {
@@ -55,7 +55,9 @@
     font-size: 2vw;
     color: #020202;
 }
-
+.navbar-heading {
+    font-size: 3vw;
+}
 @media (max-width: 600px) {
     .conversations-expanded {
         display: none;
@@ -79,5 +81,9 @@
     .conversation p {
         font-size: 5vw;
         color: #020202;
+    }
+
+    .navbar-heading {
+        font-size: 5vw;
     }
 }

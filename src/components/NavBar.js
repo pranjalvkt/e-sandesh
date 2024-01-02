@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <img src='/sandesh.svg' id="applogo" alt="app logo"></img>
-      <h1>e Sandesh</h1>
+      <h1 className="navbar-heading">e Sandesh</h1>
       {user ? (
         <button onClick={signOut} className="sign-out" type="button">
           Sign Out
