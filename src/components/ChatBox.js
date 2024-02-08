@@ -31,23 +31,25 @@ const ChatBox = () => {
         (a, b) => a.createdAt - b.createdAt
       );
       setMessages(sortedMessages);
-      scroll.current.scrollIntoView({ behavior: "smooth" })
+      
     });
-    
+    scroll.current?.scrollIntoView({ behavior: "smooth" })
     return () => unsubscribe;
     
   }, [location.state.groupname]);
 
   return (
-    <main className="chat-box">
-      <div className="messages-wrapper">
-        {messages?.map((message) => (
-            <Message key={message.id} message={message} />
-        ))}
-      </div>
-      <span ref={scroll}></span>
-      <SendMessage scroll={scroll}/>
-    </main>
+    <div>
+      <main className="chat-box">
+        <div className="messages-wrapper">
+          {messages?.map((message) => (
+              <Message key={message.id} message={message} />
+          ))}
+        </div>
+      </main>
+        <span ref={scroll}></span>
+      <SendMessage/>
+    </div>
   );
 };
 

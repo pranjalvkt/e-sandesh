@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Conversations from "./components/Conversations";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Restricted from "./components/Restricted";
+import Footer from "./components/Footer";
 
 function App() {
   const [user] = useAuthState(auth);

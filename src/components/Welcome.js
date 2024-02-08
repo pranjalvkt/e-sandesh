@@ -24,8 +24,8 @@ const Welcome = () => {
       {
         loadingFlag ?
           <div className="loadingbg">
-            <img className="loadinggif" src='/XOsX.gif' alt='loading'/>
             <h1>Loading...</h1>
+            <img className="loadinggif" src='/XOsX.gif' alt='loading'/>
           </div> :
           <main>
             <h2>Welcome to e-Sandesh.</h2>
